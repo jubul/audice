@@ -48,7 +48,7 @@ var webaudio_tooling_obj = function() {
                 data: {
                     "To": "+543564643431",
                     "From": "+17173828528",
-                    "Body": "CORTE"
+                    "Body": "CONTACTO 91.5 CORTADA"
                 },
                 beforeSend: function(xhr) {
                     xhr.setRequestHeader("Authorization", "Basic " + btoa(SID + ':' + Key));
