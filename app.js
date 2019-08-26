@@ -37,6 +37,59 @@ var webaudio_tooling_obj = function() {
 
     // ---
 
+
+    /*function Mensaje1() {
+        $(function() {
+            // Your Twilio credentials
+            var SID = "AC4f8861e54df90e8f8bcac38442d9b690"
+            var Key = "b571526c5999766d2ee6602471cc2bfa"
+            $.ajax({
+                type: 'POST',
+                url: 'https://api.twilio.com/2010-04-01/Accounts/' + SID + '/Messages.json',
+                data: {
+                    "To": "+543564643431",
+                    "From": "+17173828528",
+                    "Body": "CONTACTO 91.5 CORTADA"
+                },
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader("Authorization", "Basic " + btoa(SID + ':' + Key));
+                },
+                success: function(data) {
+                    console.log(data);
+                },
+                error: function(data) {
+                    console.log(data);
+                }
+            });
+        });
+    }*/
+
+    function Mensaje2() {
+        $(function() {
+            // Your Twilio credentials
+            var SID = "AC4198a56631ae0ead9ff5d438793ea252"
+            var Key = "9b87c646f49fe26fabcef34a7f10af6c"
+            $.ajax({
+                type: 'POST',
+                url: 'https://api.twilio.com/2010-04-01/Accounts/' + SID + '/Messages.json',
+                data: {
+                    "To": "+543564622573",
+                    "From": "+17173828528",
+                    "Body": "CONTACTO 91.5 CORTADA"
+                },
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader("Authorization", "Basic " + btoa(SID + ':' + Key));
+                },
+                success: function(data) {
+                    console.log(data);
+                },
+                error: function(data) {
+                    console.log(data);
+                }
+            });
+        });
+    }
+
     function Mensaje() {
         $(function() {
             // Your Twilio credentials
@@ -113,6 +166,8 @@ var webaudio_tooling_obj = function() {
             console.log("SILENCIO")
             puedeLanzarAlerta = false
             Mensaje();
+            //Mensaje1();
+            Mensaje2();
             setTimeout(function() { puedeLanzarAlerta = true }, 10000)
         }
     }
