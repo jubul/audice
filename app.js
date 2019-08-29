@@ -147,7 +147,7 @@ var webaudio_tooling_obj = function() {
             sampleEnergy = sampleEnergy + Math.abs(microphone_output_buffer[i]);
         }
         sampleEnergy = sampleEnergy / BUFF_SIZE;
-        document.getElementById("barra-progreso").style.width = Math.floor(sampleEnergy * 100) + "%";
+        document.getElementById("barra-progreso").style.width = Math.floor(sampleEnergy * 1000) + "%";
 
         if (ventanas.length >= MAX_VENTANAS) {
             ventanas.shift();
@@ -160,7 +160,7 @@ var webaudio_tooling_obj = function() {
             sumaVentanas = sumaVentanas + ventanas[i];
         }
         sumaVentanas = sumaVentanas / (MAX_VENTANAS * BUFF_SIZE);
-        var sumaVentanasNormalizadas = Math.floor(sumaVentanas * 100000);
+        var sumaVentanasNormalizadas = Math.floor(sumaVentanas * 1000000);
         console.log(sumaVentanasNormalizadas)
         document.getElementById("barra-progreso2").style.width = sumaVentanasNormalizadas + "%";
         if (sumaVentanasNormalizadas <= 1 && puedeLanzarAlerta) {
