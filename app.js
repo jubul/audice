@@ -147,7 +147,7 @@ var webaudio_tooling_obj = function() {
             sampleEnergy = sampleEnergy + Math.abs(microphone_output_buffer[i]);
         }
         sampleEnergy = sampleEnergy / BUFF_SIZE;
-        document.getElementById("barra-progreso").style.width = Math.floor(sampleEnergy * 1000) + "%";
+        document.getElementById("barra-progreso").style.width = Math.floor(sampleEnergy * 100) + "%";
 
         if (ventanas.length >= MAX_VENTANAS) {
             ventanas.shift();
