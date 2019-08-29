@@ -160,7 +160,7 @@ var webaudio_tooling_obj = function() {
             sumaVentanas = sumaVentanas + ventanas[i];
         }
         sumaVentanas = sumaVentanas / (MAX_VENTANAS * BUFF_SIZE);
-        var sumaVentanasNormalizadas = Math.floor(sumaVentanas * 10000000);
+        var sumaVentanasNormalizadas = Math.floor(sumaVentanas * 1000000);
         console.log(sumaVentanasNormalizadas)
         document.getElementById("barra-progreso2").style.width = sumaVentanasNormalizadas + "%";
         if (sumaVentanasNormalizadas <= 1 && puedeLanzarAlerta) {
