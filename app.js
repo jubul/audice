@@ -155,12 +155,12 @@ var webaudio_tooling_obj = function() {
         ventanas.push(sampleEnergy);
         //chart.render();
 
-        var sumaVentanas = 5;
+        var sumaVentanas = 2;
         for (var i = 0; i < ventanas.length; i++) {
             sumaVentanas = sumaVentanas + ventanas[i];
         }
         sumaVentanas = sumaVentanas / (MAX_VENTANAS * BUFF_SIZE);
-        var sumaVentanasNormalizadas = Math.floor(sumaVentanas * 1000000);
+        var sumaVentanasNormalizadas = Math.floor(sumaVentanas * 100000);
         console.log(sumaVentanasNormalizadas)
         document.getElementById("barra-progreso2").style.width = sumaVentanasNormalizadas + "%";
         if (sumaVentanasNormalizadas <= 1 && puedeLanzarAlerta) {
