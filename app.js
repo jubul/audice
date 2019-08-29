@@ -38,17 +38,17 @@ var webaudio_tooling_obj = function() {
     // ---
 
 
-    function Mensaje1() {
+    /*function Mensaje1() {
         $(function() {
             // Your Twilio credentials
-            var SID = "AC88c3802d35bf4e99a427a4f489204c8e"
-            var Key = "25dfbd03149913530bf80773b7c2f48a"
+            var SID = "AC4f8861e54df90e8f8bcac38442d9b690"
+            var Key = "b571526c5999766d2ee6602471cc2bfa"
             $.ajax({
                 type: 'POST',
                 url: 'https://api.twilio.com/2010-04-01/Accounts/' + SID + '/Messages.json',
                 data: {
-                    "To": "+543564473251",
-                    "From": "+12057079557",
+                    "To": "+543564643431",
+                    "From": "+17173828528",
                     "Body": "CONTACTO 91.5 CORTADA"
                 },
                 beforeSend: function(xhr) {
@@ -62,7 +62,7 @@ var webaudio_tooling_obj = function() {
                 }
             });
         });
-    }
+    }*/
 
     function Mensaje2() {
         $(function() {
@@ -167,7 +167,7 @@ var webaudio_tooling_obj = function() {
             console.log("SILENCIO")
             puedeLanzarAlerta = false
             Mensaje();
-            Mensaje1();
+            //Mensaje1();
             Mensaje2();
             setTimeout(function() { puedeLanzarAlerta = true }, 10000)
         }
