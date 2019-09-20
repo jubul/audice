@@ -38,7 +38,7 @@ var webaudio_tooling_obj = function() {
     // ---
 
 
-    function Mensaje1() {
+    /*function Mensaje1() {
         $(function() {
             // Your Twilio credentials
             var SID = "AC88c3802d35bf4e99a427a4f489204c8e"
@@ -62,7 +62,7 @@ var webaudio_tooling_obj = function() {
                 }
             });
         });
-    }
+    }*/
 
     function Mensaje2() {
         $(function() {
@@ -163,10 +163,10 @@ var webaudio_tooling_obj = function() {
         var sumaVentanasNormalizadas = Math.floor(sumaVentanas * 1000000);
         console.log(sumaVentanasNormalizadas)
         document.getElementById("barra-progreso2").style.width = sumaVentanasNormalizadas + "%";
-        if (sumaVentanasNormalizadas <= 4 && puedeLanzarAlerta) {
+        if (sumaVentanasNormalizadas <= 3 && puedeLanzarAlerta) {
             console.log("SILENCIO")
             puedeLanzarAlerta = false
-            Mensaje();
+            //Mensaje();
             Mensaje1();
             Mensaje2();
             setTimeout(function() { puedeLanzarAlerta = true }, 10000)
