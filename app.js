@@ -155,7 +155,7 @@ var webaudio_tooling_obj = function() {
         ventanas.push(sampleEnergy);
         //chart.render();
 
-        var sumaVentanas = 2;
+        var sumaVentanas = 0;
         for (var i = 0; i < ventanas.length; i++) {
             sumaVentanas = sumaVentanas + ventanas[i];
         }
