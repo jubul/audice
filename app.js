@@ -166,7 +166,7 @@ var webaudio_tooling_obj = function() {
         if (sumaVentanasNormalizadas <= 1 && puedeLanzarAlerta) {
             console.log("SILENCIO")
             puedeLanzarAlerta = false
-            Mensaje();
+            //Mensaje();
             Mensaje1();
             Mensaje2();
             setTimeout(function() { puedeLanzarAlerta = true }, 10000)
