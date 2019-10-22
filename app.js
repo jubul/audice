@@ -176,7 +176,7 @@ var webaudio_tooling_obj = function() {
     function start_microphone(stream) {
 
         gain_node = audioContext.createGain();
-        gain_node.gain.value = 200;
+        gain_node.gain.value = 800;
         microphone_stream = audioContext.createMediaStreamSource(stream);
         microphone_stream.connect(gain_node);
 
