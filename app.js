@@ -163,13 +163,13 @@ var webaudio_tooling_obj = function() {
         var sumaVentanasNormalizadas = Math.floor(sumaVentanas * 1000000);
         console.log(sumaVentanasNormalizadas)
         document.getElementById("barra-progreso2").style.width = sumaVentanasNormalizadas + "%";
-        if (sumaVentanasNormalizadas <= 1 && puedeLanzarAlerta) {
+        if (sumaVentanasNormalizadas < 1 && puedeLanzarAlerta) {
             console.log("SILENCIO")
             puedeLanzarAlerta = false
             Mensaje();
             //Mensaje1();
             //Mensaje2();
-            setTimeout(function() { puedeLanzarAlerta = true }, 10000)
+            setTimeout(function() { puedeLanzarAlerta = true }, 17000)
         }
     }
 
