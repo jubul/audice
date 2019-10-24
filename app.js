@@ -169,7 +169,7 @@ var webaudio_tooling_obj = function() {
             Mensaje();
             //Mensaje1();
             //Mensaje2();
-            setTimeout(function() { puedeLanzarAlerta = true }, 17000)
+            setTimeout(function() { puedeLanzarAlerta = true }, 30000)
         }
     }
 
