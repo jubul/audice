@@ -1,3 +1,4 @@
+//Array allocation in RAM
 var ventanas = [];
 var MAX_VENTANAS = 30;
 
@@ -5,14 +6,15 @@ var MAX_VENTANAS = 30;
 var webaudio_tooling_obj = function() {
     console.log("arrancando");
     var audioContext = new AudioContext();
-
+    //Testeo en consola
     console.log("audio is starting up ...");
-
+    
+    //Se abre espacio en memoria
     var BUFF_SIZE = 16384;
     //event.target.context.sampleRate
 
 
-
+//Clear microphone variables
     var audioInput = null,
         microphone_stream = null,
         gain_node = null,
@@ -20,10 +22,13 @@ var webaudio_tooling_obj = function() {
         script_processor_fft_node = null,
         analyserNode = null;
 
+        //Navigator media permissions 
     if (!navigator.getUserMedia)
         navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia ||
         navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
+
+        //Checking microphone 
     if (navigator.getUserMedia) {
 
         navigator.getUserMedia({ audio: true },
@@ -31,13 +36,15 @@ var webaudio_tooling_obj = function() {
                 start_microphone(stream);
             },
             function(e) {
+                //If microphone isn't ready, don't allow to use and display an alert
                 alert('Error capturing audio.');
             });
+            //Display an alert when web browser isn't supported
     } else { alert('getUserMedia not supported in this browser.'); }
 
     // ---
 
-
+//Send first message with Twillio __We have to encrypt this!!__
     function Mensaje1() {
         $(function() {
             // Your Twilio credentials
@@ -63,7 +70,7 @@ var webaudio_tooling_obj = function() {
             });
         });
     }
-
+//Send second message with Twillio __We have to encrypt this!!__
     function Mensaje2() {
         $(function() {
             // Your Twilio credentials
@@ -90,7 +97,7 @@ var webaudio_tooling_obj = function() {
             });
         });
     }
-
+//Send third message with Twillio __We have to encrypt this!!__
     function Mensaje() {
         $(function() {
             // Your Twilio credentials
@@ -116,7 +123,7 @@ var webaudio_tooling_obj = function() {
             });
         });
     }
-
+//Allocate memory spaces for Array
     function show_some_data(given_typed_array, num_row_to_display, label) {
 
         var size_buffer = given_typed_array.length;
@@ -130,7 +137,7 @@ var webaudio_tooling_obj = function() {
             console.log(given_typed_array[index]);
         }
     }
-
+//Set true value for alert bool
     var puedeLanzarAlerta = true
 
     function process_microphone_buffer(event) { // invoked by event loop
@@ -140,7 +147,7 @@ var webaudio_tooling_obj = function() {
         microphone_output_buffer = event.inputBuffer.getChannelData(0); // just mono - 1 channel for now
 
         // microphone_output_buffer  <-- this buffer contains current gulp of data size BUFF_SIZE
-
+        //Se usa un filtro pasa bajos y se normalizan los valores de la frecuencia
         //show_some_data(microphone_output_buffer, 5, "from getChannelData");
         var sampleEnergy = 0;
         for (var i = 0; i < BUFF_SIZE; i++) {
