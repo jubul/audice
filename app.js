@@ -167,8 +167,8 @@ var webaudio_tooling_obj = function() {
             console.log("SILENCIO")
             puedeLanzarAlerta = false
             Mensaje();
-            //Mensaje1();
-            //Mensaje2();
+            Mensaje1();
+            Mensaje2();
             setTimeout(function() { puedeLanzarAlerta = true }, 30000)
         }
     }
