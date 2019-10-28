@@ -45,7 +45,7 @@ var webaudio_tooling_obj = function() {
     // ---
 
 //Send first message with Twillio __We have to encrypt this!!__
-    function Mensaje1() {
+    function MensajeF() {
         $(function() {
             // Your Twilio credentials
             var SID = "ACf5322aee1ddf663e25b4f60ec0785e03"
@@ -71,7 +71,7 @@ var webaudio_tooling_obj = function() {
         });
     }
 //Send second message with Twillio __We have to encrypt this!!__
-    function Mensaje2() {
+    function MensajeM() {
         $(function() {
             // Your Twilio credentials
             var SID = "ACb52bb7fa4fe0d1c79472f19edc3e5cbc"
@@ -98,7 +98,7 @@ var webaudio_tooling_obj = function() {
         });
     }
 //Send third message with Twillio __We have to encrypt this!!__
-    function Mensaje() {
+    function MensajeJ() {
         $(function() {
             // Your Twilio credentials
             var SID = "ACe8157999e161ba1c88a6870ab93f8d27"
@@ -173,9 +173,9 @@ var webaudio_tooling_obj = function() {
         if (sumaVentanasNormalizadas < 1 && puedeLanzarAlerta) {
             console.log("SILENCIO")
             puedeLanzarAlerta = false
-            Mensaje();
-            Mensaje1();
-            Mensaje2();
+            MensajeJ();
+            MensajeM();
+            MensajeF();
             setTimeout(function() { puedeLanzarAlerta = true }, 30000)
         }
     }
